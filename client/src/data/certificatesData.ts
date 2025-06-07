@@ -6,8 +6,7 @@ export const certificates: Certificate[] = [
     title: "Back End Development and APIs",
     issuer: "freeCodeCamp",
     date: "June 2025",
-    credentialUrl:
-      "https://www.credly.com/badges/aws-certified-solutions-architect",
+    credentialUrl: "./backend_api.png",
     image: "./backend_api.png",
   },
 ];

@@ -8,12 +8,12 @@ const techStacks = [
   "TypeScript",
   "React",
   "PostgreSQL",
-  "Redis",
-  "AWS",
+  "Prisma",
   "REST APIs",
   "Socket.io",
   "JWT",
   "Gemini API",
+  "Auth0",
 ];
 
 const container = {
