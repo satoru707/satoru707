@@ -21,6 +21,7 @@ const Contact: React.FC = () => {
       .post(`${import.meta.env.VITE_BACKEND_URL}/send`, formData)
       .then((res) => {
         setMessage("Email sent successfully!");
+        setType("success");
         setShowToast(true);
         // console.log("Success:", res.data);
       })
