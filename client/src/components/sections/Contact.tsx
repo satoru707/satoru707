@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { Send, Mail, Github, Linkedin } from "lucide-react";
+import { Send, Mail, Github, Linkedin, Check } from "lucide-react";
 import SectionHeading from "../ui/SectionHeading";
 import Button from "../ui/Button";
 import axios from "axios";
+import NotificationToast from "../ui/Notification";
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -11,17 +12,23 @@ const Contact: React.FC = () => {
     email: "",
     message: "",
   });
+  const [showToast, setShowToast] = useState(false);
+  const [type, setType] = useState("success");
+  const [message, setMessage] = useState("");
 
   async function handleEmail() {
-    console.log(import.meta.env.VITE_BACKEND_URL);
-
     await axios
       .post(`${import.meta.env.VITE_BACKEND_URL}/send`, formData)
       .then((res) => {
-        console.log("Success:", res.data);
+        setMessage("Email sent successfully!");
+        setShowToast(true);
+        // console.log("Success:", res.data);
       })
       .catch((err) => {
         console.error("Error sending email:", err);
+        setMessage("Error sending message.");
+        setType("error");
+        setShowToast(true);
       });
   }
 
@@ -34,7 +41,6 @@ const Contact: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
     setFormData({ name: "", email: "", message: "" });
   };
 
@@ -188,6 +194,15 @@ const Contact: React.FC = () => {
                 <Send size={16} />
                 <span>Send Message</span>
               </Button>
+
+              <div>
+                <NotificationToast
+                  message={message}
+                  type={type}
+                  show={showToast}
+                  onClose={() => setShowToast(false)}
+                />
+              </div>
             </form>
           </motion.div>
         </div>
