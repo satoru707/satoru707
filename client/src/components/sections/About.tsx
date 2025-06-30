@@ -5,12 +5,12 @@ import SectionHeading from "../ui/SectionHeading";
 const techStacks = [
   "Node.js",
   "Express",
+  "Fastify",
   "TypeScript",
   "React",
   "PostgreSQL",
   "Prisma",
   "REST APIs",
-  "Socket.io",
   "JWT",
   "Gemini API",
   "Auth0",

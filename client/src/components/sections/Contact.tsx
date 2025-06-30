@@ -42,6 +42,7 @@ const Contact: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    handleEmail();
     setFormData({ name: "", email: "", message: "" });
   };
 
@@ -190,7 +191,6 @@ const Contact: React.FC = () => {
               <Button
                 type="submit"
                 className="w-full flex items-center justify-center space-x-2"
-                onClick={handleEmail}
               >
                 <Send size={16} />
                 <span>Send Message</span>

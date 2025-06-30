@@ -16,7 +16,7 @@ export const projects: Project[] = [
     title: "CollabCode",
     description:
       "Developer collaboration platform with real-time code sharing and review capabilities.",
-    stack: ["Node.js", "Socket.io", "MongoDB", "React", "Redux"],
+    stack: ["Node.js", "Socket.io", "Express", "MongoDB", "React"],
     liveUrl: "https://collab-code-mauve.vercel.app",
     githubUrl: "https://github.com/satoru707/CollabCode",
     image: "./collabcode.png",
@@ -26,7 +26,7 @@ export const projects: Project[] = [
     title: "TaskNest",
     description:
       "A team task manager with intellignece to streamline workflow and boost productivity.",
-    stack: ["Node.js", "TypeScript", "Express", "PostgreSQL", "JWT"],
+    stack: ["Node.js", "TypeScript", "Fastify", "PostgreSQL", "Auth0"],
     githubUrl: "https://github.com/satoru707/TaskNest",
     liveUrl: "https://task-nest-blue.vercel.app",
     image: "./tasknest.png",
