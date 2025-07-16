@@ -23,7 +23,7 @@ const Contact: React.FC = () => {
         setMessage("Email sent successfully!");
         setType("success");
         setShowToast(true);
-        // console.log("Success:", res.data);
+        console.log("Success:", res.data);
       })
       .catch((err) => {
         console.error("Error sending email:", err);
