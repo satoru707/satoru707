@@ -28,7 +28,7 @@ export const projects: Project[] = [
       "A team task manager with intellignece to streamline workflow and boost productivity.",
     stack: ["Node.js", "TypeScript", "Fastify", "PostgreSQL", "Auth0"],
     githubUrl: "https://github.com/satoru707/TaskNest",
-    liveUrl: "https://task-nest-blue.vercel.app",
+    liveUrl: "https://task-nest-gamma-eight.vercel.app",
     image: "./tasknest.png",
   },
 ];
