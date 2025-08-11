@@ -14,6 +14,7 @@ const techStacks = [
   "JWT",
   "Gemini API",
   "Auth0",
+  "Prisma ORM",
 ];
 
 const container = {

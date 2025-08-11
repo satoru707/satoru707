@@ -1,35 +1,29 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { Send, Mail, Github, Linkedin, Check } from "lucide-react";
+import { Send, Mail, Github, Linkedin, Loader2 } from "lucide-react";
 import SectionHeading from "../ui/SectionHeading";
 import Button from "../ui/Button";
 import axios from "axios";
-import NotificationToast from "../ui/Notification";
+import { toast } from "sonner";
 
 const Contact: React.FC = () => {
+  const [isLoading, setIsLoading] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     message: "",
   });
-  const [showToast, setShowToast] = useState(false);
-  const [type, setType] = useState("success");
-  const [message, setMessage] = useState("");
 
   async function handleEmail() {
     await axios
       .post(`${import.meta.env.VITE_BACKEND_URL}/send`, formData)
-      .then((res) => {
-        setMessage("Email sent successfully!");
-        setType("success");
-        setShowToast(true);
-        console.log("Success:", res.data);
+      .then((res: any) => {
+        toast.success("Email sent successfully!");
+        // console.log("Success:", res.data);
       })
       .catch((err) => {
         console.error("Error sending email:", err);
-        setMessage("Error sending message.");
-        setType("error");
-        setShowToast(true);
+        toast.error("Error sending email!");
       });
   }
 
@@ -40,10 +34,12 @@ const Contact: React.FC = () => {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
+    setIsLoading(true);
     e.preventDefault();
-    handleEmail();
+    await handleEmail();
     setFormData({ name: "", email: "", message: "" });
+    setIsLoading(false);
   };
 
   return (
@@ -192,18 +188,15 @@ const Contact: React.FC = () => {
                 type="submit"
                 className="w-full flex items-center justify-center space-x-2"
               >
-                <Send size={16} />
-                <span>Send Message</span>
+                {isLoading ? (
+                  <Loader2 className="text-neo-green animate-spin" size={16} />
+                ) : (
+                  <>
+                    <Send size={16} />
+                    <span>Send Message</span>
+                  </>
+                )}
               </Button>
-
-              <div>
-                <NotificationToast
-                  message={message}
-                  type={type}
-                  show={showToast}
-                  onClose={() => setShowToast(false)}
-                />
-              </div>
             </form>
           </motion.div>
         </div>

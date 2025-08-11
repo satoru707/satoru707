@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { ThemeProvider } from "./context/ThemeContext";
 import Navbar from "./components/layout/Navbar";
 import Hero from "./components/sections/Hero";
@@ -8,6 +8,7 @@ import Experience from "./components/sections/Experience";
 import Certificates from "./components/sections/Certificates";
 import Contact from "./components/sections/Contact";
 import Footer from "./components/layout/Footer";
+import { Toaster } from "sonner";
 
 function App() {
   useEffect(() => {
@@ -19,6 +20,7 @@ function App() {
       <div className="min-h-screen bg-[var(--bg-primary)] text-[var(--text-primary)] font-mono">
         <Navbar />
         <main>
+          <Toaster position="top-right" richColors />
           <Hero />
           <About />
           <Projects />
