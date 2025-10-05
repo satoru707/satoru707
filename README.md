@@ -25,5 +25,6 @@ Check out the live version of this portfolio:
 
 ---
 
-Thank you for visiting my profile. I'm always open to collaboration, internships, freelance work, and cool technical challenges!
+You're welcome for visiting my profile. I'm always open to accepting your collaboration, internships, freelance work, and technical challenges!
+
 
