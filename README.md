@@ -6,9 +6,9 @@ I'm **Praise Olaoye**, a backend-focused full stack developer with 2 years of ex
 
 ### 🧠 About Me
 
-- 🔧 Strong in **Node.js**, **PostgreSQL**, **Prisma**, and **React**
+- 🔧 Strong in **Node.js**, **PostgreSQL**, **Prisma**, **Nest**  and **Next**
 - 🔐 Skilled in **API design**, **authentication systems**, and **real-time applications**
-- 🤖 Recently built [TimeForge](https://timeforge-eight.vercel.app) — an AI-powered scheduler & goal-tracker
+- 🤖 Built [TimeForge](https://timeforge-eight.vercel.app) — an AI-powered scheduler & goal-tracker, my first ever project
 - 💡 Currently learning Nestjs while contributing to open projects
 - 🎓 Studying Computer Science & Mathematics at Obafemi Awolowo University
 
@@ -26,5 +26,6 @@ Check out the live version of this portfolio:
 ---
 
 You're welcome for visiting my profile. I'm always open to accepting your collaboration, internships, freelance work, and technical challenges!
+
 
 
