@@ -2,7 +2,7 @@
 
 Welcome to my developer portfolio!
 
-I'm **Praise Olaoye**, a backend-focused full stack developer with 2 years of experience building secure, scalable, and high-performing web applications.
+I'm **Praise Olaoye**, a backend-focused full stack developer with a year of experience building secure, scalable, and high-performing web applications.
 
 ### 🧠 About Me
 
@@ -26,6 +26,7 @@ Check out the live version of this portfolio:
 ---
 
 You're welcome for visiting my profile. I'm always open to accepting your collaboration, internships, freelance work, and technical challenges!
+
 
 
 
